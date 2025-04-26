@@ -7,7 +7,8 @@
 
 ## Archivos incluidos
 
-- **`cod1.vhd`**: Archivo original con el código del enunciado, es el que debemos revisar. 
+- **`cod1.vhd`**: Archivo original con el código del enunciado, es el que debemos revisar.
+- **`design.vhd`**: Este es el archivo correcto. No desespere y evite verlo a la primera.
 - **`testbench.vhd`**: Archivo de test bench que contiene la simulación para verificar el comportamiento de la unidad OR.
 - **Diseño de componentes**: El componente `or_unit` está instanciado y conectado a las señales de prueba.
 - **Simulación**: Se incluyen estímulos para verificar el comportamiento del diseño.
