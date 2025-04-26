@@ -9,7 +9,6 @@ Cada carpeta correspondiente a un ejercicio incluye los siguientes elementos:
 1. **Archivo README**: Contiene las especificaciones del ejercicio, como el enunciado y observaciones realizadas.
 2. **Archivos `.vhd`**: Diseños de los componentes en VHDL.
 3. **Archivo `.sv`**: Test Bench para la simulación de los diseños.
-4. **Captura de EPWave**: Imagen con los resultados de la simulación.
 
 ## Tecnologías Utilizadas
 
