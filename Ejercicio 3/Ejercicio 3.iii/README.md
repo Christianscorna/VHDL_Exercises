@@ -9,6 +9,7 @@ Realice la descripción de un demultiplexor de dos salidas de un bit.
 
 - **`design.vhd`**: Implementación del demultiplexor de 2 salidas de 1 bit utilizando sentencias concurrentes.
 - **`testbench.vhd`**: Banco de pruebas para verificar el comportamiento del demultiplexor.
+- **`and_gate.vhd`**: Archivo con la descripcion de la compuerta AND. 
 
 ## Instrucciones
 
