@@ -7,8 +7,7 @@ Este proyecto contiene las resoluciones de diferentes ejercicios prácticos en V
 Cada carpeta correspondiente a un ejercicio incluye los siguientes elementos:
 
 1. **Archivo README**: Contiene las especificaciones del ejercicio, como el enunciado y observaciones realizadas.
-2. **Archivos `.vhd`**: Diseños de los componentes en VHDL.
-3. **Archivo `.sv`**: Test Bench para la simulación de los diseños.
+2. **Archivos `.vhd`**: Diseños de los componentes en VHDL y archivos Test Bench para la simulación de los diseños.
 
 ## Tecnologías Utilizadas
 
