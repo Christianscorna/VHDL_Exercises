@@ -1,45 +1,23 @@
+-- 7) Diseñe un circuito que realice la comparación entre dos operandos a y b de dos bits. el circuito posee dos salidas g y e de un bit. La salida g es 1 si a>b de lo contrario es 0 y e es 1 solo en el caso que a = b.
+
+-- Code your design here
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity full_adder_8b is
-    port (
-        A_vec : in std_logic_vector(7 downto 0);
-        B_vec : in std_logic_vector(7 downto 0);
-        Cin : in std_logic;
-        Cout : out std_logic;
-        Result_vec : out std_logic_vector(7 downto 0)
+entity comparador is
+	port (
+    	a : in std_logic_vector(1 downto 0);
+        b : in std_logic_vector(1 downto 0);
+        g : out std_logic;
+        e : out std_logic
     );
-end full_adder_8b;
+end comparador;
 
-architecture archi_full_adder of full_adder_8b is
-
-    component full_adder is
-        port (
-            a, b     : in std_logic;
-            Cin      : in std_logic;
-            Cout     : out std_logic;
-            result   : out std_logic
-        );
-    end component;
-
-    signal carry : std_logic_vector(8 downto 0);
+architecture archi_comparador of comparador is
 
 begin
 
-    carry(0) <= Cin;
+	g <= '1' when a > b else '0';
+    e <= '1' when a = b else '0';
 
-    generador : for i in 0 to 7 generate
-    
-        fa : full_adder
-            port map (
-                a => A_vec(i),
-                b => B_vec(i),
-                Cin  => carry(i),
-                Cout => carry(i + 1),
-                result => Result_vec(i)
-            );
-    end generate;
-
-    Cout <= carry(8);
-
-end archi_full_adder;
+end archi_comparador;

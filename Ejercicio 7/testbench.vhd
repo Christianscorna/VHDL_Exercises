@@ -1,47 +1,55 @@
+-- Code your testbench here
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity fa_tb is
-end fa_tb;
+entity comparador_tb is
+end comparador_tb;
 
-architecture beh of fa_tb is
+architecture tb of comparador_tb is
 
-component full_adder_8b is
+component comparador is
 	port (
-    	A_vec : in std_logic_vector(7 downto 0);
-        B_vec : in std_logic_vector(7 downto 0);
-        Cin : in std_logic;
-        Cout : out std_logic;
-        Result_vec : out std_logic_Vector(7 downto 0)
+    	a : in std_logic_vector(1 downto 0);
+        b : in std_logic_vector(1 downto 0);
+        g : out std_logic;
+        e : out std_logic
     );
 end component;
 
-signal a : std_logic_vector(7 downto 0);
-signal b : std_logic_vector(7 downto 0);
-signal Cin : std_logic;
-signal Cout : std_logic;
-signal result : std_logic_Vector(7 downto 0);
+signal a : std_logic_vector(1 downto 0);
+signal b : std_logic_vector(1 downto 0);
+signal g : std_logic;
+signal e : std_logic;
 
 begin
 
-	uut : full_adder_8b
+	uut : comparador 
     	port map (
-        	A_vec => a,
-            B_vec => b,
-            Cin => Cin,
-            Cout => Cout,
-            Result_vec => result
+        	a => a,
+            b => b,
+            g => g,
+            e => e
         );
         
     process
     begin
+    
+    	a <= "01";
+        b <= "01";
+        wait for 5 ns;
 
-        a <= "11111111";
-        b <= "11111111";
-        Cin <= '1';
-        wait for 10 ns;
+        a <= "10";
+        b <= "01";
+        wait for 5 ns;
+
+        a <= "00";
+        b <= "00";
+        wait for 5 ns;
         
-        wait;
+        a <= "11";
+        b <= "00";
+        wait;  
     
     end process;
-end beh;
+
+end tb;

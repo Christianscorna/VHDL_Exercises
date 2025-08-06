@@ -8,9 +8,8 @@ e es 1 solo en el caso que a = b.
 
 ## Archivos incluidos
 
-- **`design.vhd`**: Implementación del sumador de 2 entradas de 8 bits mediante instanciación de componente: sumador completo de dos entradas de 1 bit.
-- **`testbench.vhd`**: Banco de pruebas para verificar el comportamiento del sumador completo con instancia de overflow. 
-- **`1_bit_adder.vhd`**: Implementación del sumador de 1 bit realizada previamente. 
+- **`design.vhd`**: Implementación del comparador de operandos de dos bits.
+- **`testbench.vhd`**: Banco de pruebas para verificar el comportamiento del comparador.
 
 ## Notas
 
